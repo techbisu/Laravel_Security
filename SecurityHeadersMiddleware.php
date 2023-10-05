@@ -13,7 +13,7 @@ class SecurityHeadersMiddleware
         // Set Content Security Policy (CSP)
         $response->headers->set(
             'Content-Security-Policy',
-            "default-src 'self' blob: data:; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api64.ipify.org ws://localhost:8181 blob:; frame-src 'self' data: blob:;"
+            "default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; frame-src 'self';"
         );    
 
         // Set X-Content-Type-Options
